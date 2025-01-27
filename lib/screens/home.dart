@@ -8,6 +8,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    print(width);
     return Scaffold(
       appBar: AppBar(
         leadingWidth: MediaQuery.of(context).size.width / 6,
@@ -116,44 +118,84 @@ class HomeScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Transform.translate(
-                    offset: Offset(-200, 170),
-                    child: Text(
-                      '"Your Path to Financial Mastery\n Starts Here with Roopal Kanjara \n– Premier Wealth Coach."',
-                      textAlign: TextAlign.start,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontFamily: 'HammerSmithOne',
-                      ),
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset(-330, 240),
-                    child: Container(
-                      height: MediaQuery.of(context).size.height * 0.055,
-                      width: 210,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFCC00),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Center(
+                  width < 1440
+                      ? Transform.translate(
+                          offset: Offset(-200, 100),
                           child: Text(
-                            "Connect Now",
-                            textAlign: TextAlign.center,
+                            '"Your Path to Financial Mastery\n Starts Here with Roopal Kanjara \n– Premier Wealth Coach."',
+                            textAlign: TextAlign.start,
                             style: TextStyle(
-                              color: Color(0xFF737373),
-                              fontSize: 25,
-                              fontFamily: 'LeagueSpartan',
-                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontFamily: 'HammerSmithOne',
+                            ),
+                          ),
+                        )
+                      : Transform.translate(
+                          offset: Offset(-200, 170),
+                          child: Text(
+                            '"Your Path to Financial Mastery\n Starts Here with Roopal Kanjara \n– Premier Wealth Coach."',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontFamily: 'HammerSmithOne',
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                  ),
+                  width < 1440
+                      ? Transform.translate(
+                          offset: Offset(-330, 180),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            width: 210,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFFCC00),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Center(
+                                child: Text(
+                                  "Connect Now",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Color(0xFF737373),
+                                    fontSize: 25,
+                                    fontFamily: 'LeagueSpartan',
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
+                      : Transform.translate(
+                          offset: Offset(-330, 240),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.055,
+                            width: 210,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFFCC00),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Center(
+                                child: Text(
+                                  "Connect Now",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Color(0xFF737373),
+                                    fontSize: 25,
+                                    fontFamily: 'LeagueSpartan',
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                   Transform.translate(
                     offset: Offset(-180, 270),
                     child: Column(
@@ -323,79 +365,81 @@ class HomeScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10),
-                        child: Transform.translate(
-                          offset: Offset(0, 40),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // Title
-                              Text(
-                                "Who is Roopal Kanjara?",
-                                style: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontFamily: 'LeagueSpartan',
-                                ),
-                              ),
-                              const SizedBox(height: 16),
-                              // Main Description
-                              Text(
-                                "Roopal Kanjara is a seasoned wealth coach and financial expert based in Navsari, Gujarat. "
-                                "With over a decade of experience in portfolio management, trading strategies, and financial education, "
-                                "Roopal has transformed the financial lives of individuals and businesses alike. Her holistic approach "
-                                "combines technical expertise with an understanding of clients' unique needs, making her a trusted name "
-                                "in wealth coaching.",
-                                textAlign: TextAlign.start,
-                                style: TextStyle(
-                                    fontSize: 20,
+                        child: Container(
+                          child: Transform.translate(
+                            offset: Offset(0, 40),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Title
+                                Text(
+                                  "Who is Roopal Kanjara?",
+                                  style: TextStyle(
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
                                     color: Colors.white,
-                                    fontFamily: 'Garet'),
-                              ),
-                              const SizedBox(height: 16),
-                              // Sub Description
-                              Transform.translate(
-                                offset: Offset(0, 120),
-                                child: Text(
-                                  "Your ideas have a purpose, so choose words that accurately express them. Ensure your grammar is flawless as it impacts your credibility. "
-                                  "Use the active voice whenever possible as it makes any narrative easier to read.",
+                                    fontFamily: 'LeagueSpartan',
+                                  ),
+                                ),
+                                const SizedBox(height: 16),
+                                // Main Description
+                                Text(
+                                  "Roopal Kanjara is a seasoned wealth coach and financial expert based in Navsari, Gujarat. "
+                                  "With over a decade of experience in portfolio management, trading strategies, and financial education, "
+                                  "Roopal has transformed the financial lives of individuals and businesses alike. Her holistic approach "
+                                  "combines technical expertise with an understanding of clients' unique needs, making her a trusted name "
+                                  "in wealth coaching.",
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color: Color(0xFF737373),
-                                      fontFamily:
-                                          'Garet' // Light gray for subtext
-                                      ),
+                                      color: Colors.white,
+                                      fontFamily: 'Garet'),
                                 ),
-                              ),
-                              const SizedBox(height: 20),
-                              // Call to Action Button
-                              Transform.translate(
-                                offset: Offset(750, 200),
-                                child: ElevatedButton.icon(
-                                  onPressed: () {},
-                                  label: const Text(
-                                    "Know More",
+                                const SizedBox(height: 16),
+                                // Sub Description
+                                Transform.translate(
+                                  offset: Offset(0, 120),
+                                  child: Text(
+                                    "Your ideas have a purpose, so choose words that accurately express them. Ensure your grammar is flawless as it impacts your credibility. "
+                                    "Use the active voice whenever possible as it makes any narrative easier to read.",
+                                    textAlign: TextAlign.start,
                                     style: TextStyle(
+                                        fontSize: 20,
                                         color: Color(0xFF737373),
-                                        fontWeight: FontWeight.bold,
-                                        fontFamily: 'LeagueSpartan',
-                                        fontSize: 20),
+                                        fontFamily:
+                                            'Garet' // Light gray for subtext
+                                        ),
                                   ),
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor:
-                                        Color(0xFFFFCC00), // Yellow background
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 20,
-                                      vertical: 15,
+                                ),
+                                const SizedBox(height: 20),
+                                // Call to Action Button
+                                Transform.translate(
+                                  offset: Offset(750, 200),
+                                  child: ElevatedButton.icon(
+                                    onPressed: () {},
+                                    label: const Text(
+                                      "Know More",
+                                      style: TextStyle(
+                                          color: Color(0xFF737373),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'LeagueSpartan',
+                                          fontSize: 20),
                                     ),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Color(
+                                          0xFFFFCC00), // Yellow background
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 20,
+                                        vertical: 15,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(30),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
